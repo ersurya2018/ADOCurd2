@@ -1,0 +1,36 @@
+﻿@model List<ADOCrud2.Models.EmpModel>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1 style="color:red;">ADO Crud Operation</h1>
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>City</th>
+        <th>Deptartment</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Salary</td>
+            <td>@item.City</td>
+            <td>@item.Dept</td>
+            <td><button class="btn btn-success">Edit</button></td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    }
+</table>
+<br />
+<button class="btn btn-success" type="button" onclick="window.location.href = 'EmpRes';">Add New</button>

@@ -1,0 +1,58 @@
+﻿
+@model ADOCrud2.Models.EmpModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<center><h2 style="color:red;">Add Your Details</h2></center>
+<hr />
+<br />
+
+@using (Html.BeginForm("Index", "EmpRes", FormMethod.Post))
+{
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Name :</label>
+    <div class="col-sm-10">
+        @Html.TextBoxFor(a => a.Name, new { @class = "form-control", @placeholder = "Enter Name...", @required = "required" })
+    </div>
+</div>
+<br />
+
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Email :</label>
+    <div class="col-sm-10">
+        @Html.TextBoxFor(a => a.Email, new { @class = "form-control", @placeholder = "Enter Email...", @required = "required" })
+    </div>
+</div>
+<br />
+
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Salary :</label>
+    <div class="col-sm-10">
+        @Html.TextBoxFor(a => a.Salary, new { @class = "form-control", @placeholder = "Enter Salary...",@required="required" })
+        
+    </div>
+</div>
+<br />
+
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">City :</label>
+    <div class="col-sm-10">
+        @Html.TextBoxFor(a => a.City, new { @class = "form-control", @placeholder = "Enter City...", @required = "required" })
+    </div>
+</div>
+<br />
+
+<div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Department :</label>
+    <div class="col-sm-10">
+        @Html.TextBoxFor(a => a.Dept, new { @class = "form-control", @placeholder = "Enter Department...", @required = "required" })
+    </div>
+</div>
+<br />
+
+<button type="submit" class="btn btn-success" onclick="window.location.href = '~/Home/Index';">Submit</button>
+}
+
+
